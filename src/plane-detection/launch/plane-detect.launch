@@ -1,0 +1,9 @@
+<launch>
+  <arg name="sub_topic" default="/rtabmap/cloud_map"/>
+  <arg name="frame_id"  default="map"/>
+  <arg name="algo"      default="rspd"/>
+  <group ns="rspd">
+    <node pkg="plane-detection" name="PlaneDetectionhub" type="plane-detection" output="screen" args="$(arg sub_topic) $(arg frame_id) $(arg algo)"/>
+  </group>
+  <node pkg="rviz" type="rviz" name="rviz" args="-d $(find plane-detection)/launch/rspd.rviz"/>
+</launch>
