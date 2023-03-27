@@ -1,0 +1,6 @@
+[submodule "src/pinocchio"]
+	path = src/pinocchio
+	url = https://github.com/leggedrobotics/pinocchio.git
+[submodule "src/hpp-fcl"]
+	path = src/hpp-fcl
+	url = https://github.com/leggedrobotics/hpp-fcl.git
